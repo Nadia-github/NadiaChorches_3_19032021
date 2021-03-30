@@ -1,0 +1,23 @@
+img{
+    object-fit: cover;
+}
+
+body{
+    display: flex;
+}
+
+/* variables */
+$font-size: (h1:7rem, h2:5rem, corps-texte:4rem);
+
+$breakpoints: (
+  mobile: 599px
+);
+
+
+/* mixins */
+
+
+
+h1{
+    font-size: map-get($map: $font-size, $key: h1);
+}
