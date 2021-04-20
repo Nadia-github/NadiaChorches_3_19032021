@@ -1,23 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
 img{
     object-fit: cover;
 }
 
-body{
-    display: flex;
+h1{
+    font-size: map-get($font-size, h1);
 }
 
+h2{
+    font-size: map-get($font-size, h2);
+}
+
+h3{
+    font-size: map-get($font-size, h3);
+}
+
+.logo_intro{
+    width: 50%;
+}
+
+
 /* variables */
-$font-size: (h1:7rem, h2:5rem, corps-texte:4rem);
+$font-size: (
+    h1:2rem, h2:3rem, h3: 3rem, corps-texte:3rem
+);
+
+
+
 
 $breakpoints: (
-  mobile: 599px
+  tablette: 500px, desktop: 900px
 );
 
 
 /* mixins */
-
-
-
-h1{
-    font-size: map-get($map: $font-size, $key: h1);
+@mixin title-style{
+    font-family: 'Shrikhand', cursive ;
+    color: black;
 }
+
+
