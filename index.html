@@ -6,11 +6,11 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="SASS/style.css">
             <link rel="preconnect" href="https://fonts.gstatic.com">
-            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Shrikhand&display=swap" rel="stylesheet">
             <script src="https://kit.fontawesome.com/23c1381b6d.js" crossorigin="anonymous"></script>
         </head>
         <body>
-            <header>
+            <header id="header">
                 <picture>
                     <img id="logo_intro" src="images/logo/ohmyfood@2x.svg" alt="Logo ohmyfood!">
                 </picture>
@@ -24,24 +24,22 @@
                 <div class="intro__description">
                     <h1>Réservez le menu qui vous convient</h1>
                     <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                </div>
-                <a href="#restaurant">
-                    <div class="intro__button">
-                        Explorez nos restaurants
-                    </div>
-                </a>                
+                    <a href="#restaurant" class="intro__description__button">
+                            Explorez nos restaurants
+                    </a>
+                </div>                
             </section>
             <nav class="nav">
                 <h2 class="nav__heading">Fonctionnement</h2>
                 <ul>
                     <li class="nav__link"> 
-                        <span class="">1</span> 
+                        <span class="nav__link_num">1</span> 
                         <i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li> 
                     <li class="nav__link">
-                        <span class="">2</span> 
+                        <span class="nav__link_num">2</span> 
                         <i class="fas fa-list-ul"></i>Composez votre menu</li>
                     <li class="nav__link">
-                        <span class="">3</span> 
+                        <span class="nav__link_num">3</span> 
                         <i class="fas fa-store"></i>Dégustez au restaurant</li>
                 </ul>
             </nav>
