@@ -1,10 +1,10 @@
 /* _____ variables _____ */
-$font-size: (h1:1.6rem, h2:1.15rem, h3: 1rem);
+$font-size: (h1:1.6rem, h2:1.4rem, h3: 1.1rem);
 
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$light-gray: rgb(248, 248, 248);
+$light-gray: rgb(241, 241, 241);
 $dark-gray: rgb(224, 224, 224);
 $light-purple: #e6ddf1;
 
@@ -30,11 +30,12 @@ body{
     margin: 0 auto;
     text-align: center;
     width: 100%;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 a{
     text-decoration: none;
+    color: black;
 }
 
 img{
@@ -87,7 +88,7 @@ h3{
         input{
             border: none;
             background-color: $dark-gray;
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             font-weight: bold;
             width: 45%;
             text-align: center;
@@ -123,7 +124,7 @@ h3{
             margin: 22px auto;
             padding: 10px;
             font-weight: bold;
-            box-shadow: 1px 3px 10px 1px rgb(199, 198, 198);
+            box-shadow: 1px 3px 10px 1px rgb(182, 181, 181);
         }
     }
 }
@@ -132,10 +133,11 @@ h3{
     padding: 30px;
     &__heading{
         text-align: left;
-        margin-bottom: 10px;
+        margin-bottom: 25px;
     }
     &__link{
         position: relative;
+        text-align: left;
         margin: 15px auto;
         background-color: $light-gray;
         padding: 20px;
@@ -144,8 +146,9 @@ h3{
         -moz-border-radius: 15px;
         -ms-border-radius: 15px;
         -o-border-radius: 15px;
-        box-shadow: 0px 3px 5px 2px rgb(238, 238, 238);
+        box-shadow: 0px 3px 5px 2px rgb(219, 219, 219);
         font-weight: bold;
+        font-size: 1rem;
         &:hover{
             background-color: $light-purple;
         }
@@ -163,7 +166,8 @@ h3{
             -o-border-radius: 10px;
         }
         i{
-            margin-right: 15px;
+            margin-right: 20px;
+            color: gray;
             &:hover{
                 color:$color-primary;
             }
@@ -172,7 +176,76 @@ h3{
 }
 
 main{
+    padding: 30px;
+    h2{
+        text-align: left;
+        margin-bottom: 25px;
+    }
     background-color: $light-gray;
+}
+
+.fig{
+    position: relative;
+    background-color: white;
+    box-shadow: 0px 3px 5px 2px rgb(214, 214, 214);
+    border-radius: 20px;
+    height: 250px;
+    margin-bottom: 20px;
+    &__img{
+    height: 180px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: black;
+    }
+    &__new{
+        position:absolute;
+        right: 15px;
+        top: 15px;
+        background-color: $color-tertiary;
+        color: #24856c;
+        font-weight: bold;
+        padding: 7px 10px;
+    }
+    &__caption{
+        display: flex;
+        justify-content: space-between;
+        padding:10px 15px;
+        &__text{
+            text-align: left;
+            line-height: 23px;
+        }
+        i{
+            font-size: 24px;
+            margin-top: 5px;
+        }
+    }
+}
+
+footer{
+    background-color: rgb(66, 65, 65);
+    color: white;
+    padding: 30px;
+    text-align: left;
+    line-height: 25px;
+    img{
+        width: 45%;
+        margin-bottom: 15px;
+        filter: invert(100%);
+        -webkit-filter: invert(100%);
+}
+    &__bold{
+        margin-bottom: 10px;
+    }
+    i{
+        size: 2px;
+    }
+    a{
+        color: white;
+    }
+}
+
+.bold {
+    font-weight: bold;
 }
 
 
