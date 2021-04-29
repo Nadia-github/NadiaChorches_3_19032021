@@ -15,6 +15,22 @@ $light-purple: #e6ddf1;
     color: black;
 }
 
+@mixin rectangles-menus {
+    display: flex;
+    background-color: white;
+    text-align: left;
+    font-size: 0.9rem;
+    margin: 15px -4px;
+    padding: 15px;
+    position: relative;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: 0px 3px 5px 2px rgb(214, 214, 214);
+  }
+
 /*==================================================================================*/
 
 *{
@@ -22,6 +38,7 @@ $light-purple: #e6ddf1;
     padding: 0;
     box-sizing: border-box;
     list-style-type: none;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -31,6 +48,11 @@ body{
     text-align: center;
     width: 100%;
     font-size: 15px;
+    transition: 400ms;
+    position: relative;
+    @media only screen and (min-width: 650px){
+        font-size: 16px;
+        }
 }
 
 a{
@@ -56,10 +78,6 @@ h2{
 h3{
     font-size: map-get($font-size, h3);
     font-weight: bold;
-}
-
-.titre{
-    @include title-style;
 }
 
 #header{
@@ -131,9 +149,23 @@ h3{
 
 .nav{
     padding: 30px;
+    @media only screen and (min-width: 650px){
+        padding: 30px 0px;
+    }
     &__heading{
         text-align: left;
         margin-bottom: 25px;
+        @media only screen and (min-width: 650px){
+        text-align: center;
+        margin-bottom: 10px;
+        }
+    }
+    
+    &__ul{
+        @media only screen and (min-width: 650px) {
+        display: flex;
+        margin: 0;
+        }
     }
     &__link{
         position: relative;
@@ -149,25 +181,40 @@ h3{
         box-shadow: 0px 3px 5px 2px rgb(219, 219, 219);
         font-weight: bold;
         font-size: 1rem;
+        @media only screen and (min-width: 650px) {
+            margin: 20px 10px;
+            padding: 20px 0px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 10px;
+            justify-content: space-between;
+        }
         &:hover{
             background-color: $light-purple;
         }
         &__num{
             position: absolute;
-            color: white;
-            top :13px;
-            background-color: $color-primary;
-            padding: 4px;
-            width: 10px;
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
+            left: -3%;
+            top: 18px;
+            text-align: center;
+            background-color: #9356dc;
+            color: #fff;
+            border-radius: 100%;
+            padding: 3px 7px;
+            font-size: 14px;
+            @media only screen and (min-width: 650px) {
+                left: -0.5%;
+                top: -1px;
+            }
         }
-        i{
-            margin-right: 20px;
+       i{
+            margin: 0 20px;
             color: gray;
+            @media only screen and (min-width: 650px) {
+                margin: 0px;
+            }
             &:hover{
                 color:$color-primary;
             }
@@ -175,13 +222,21 @@ h3{
     }
 }
 
+.fa-mobile-alt{
+    margin-right: 60px;
+}
+
 main{
     padding: 30px;
+    background-color: $light-gray;
+    @media only screen and (min-width: 650px){
+        display: grid;
+    }
+    
     h2{
         text-align: left;
         margin-bottom: 25px;
-    }
-    background-color: $light-gray;
+    } 
 }
 
 .fig{
@@ -244,18 +299,168 @@ footer{
     }
 }
 
-.bold {
+.bold{
     font-weight: bold;
 }
 
+.bold-margin{
+    margin-left: 5px;
+}
+
+/*Propriétés propres aux pages des menus de chaque restaurant*/
+
+.height-s{
+    height: 1900px;
+}
+
+.height-m{
+    height: 2000px;
+}
+
+#intro{
+    margin: 15px auto;
+    position: relative;
+    &__icon{
+        position: absolute;
+        left : 5%;
+        top: 15%;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    &__logo{
+        margin: auto;
+        width: 40%;
+    }
+}
+
+.restaurant-pic{
+    height: 300px;
+}
+
+.menus{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50px);
+    -webkit-transform: translateY(-50px);
+    -moz-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    -o-transform: translateY(-50px);
+
+    border-radius: 30px 30px 0 0 ;
+    -webkit-border-radius: 30px 30px 0 0 ;
+    -moz-border-radius: 30px 30px 0 0 ;
+    -ms-border-radius: 30px 30px 0 0 ;
+    -o-border-radius: 30px 30px 0 0 ;
+
+    &__titre{
+        text-align: left;
+        @include title-style;
+        margin-bottom: 20px;
+    }
+    &__icon{
+        position: absolute;
+        font-size: 1.3rem;
+        top: 28px;
+        right: 50px;
+    }
+    &__plats{
+        font-weight: normal;
+        margin: 30px 0 10px 0;
+    }
+}
+
+.barre{
+    background-color: $color-tertiary;
+    height: 5px;
+    width: 55px;
+}
+
+.entrees{
+    @include rectangles-menus;
+    position: relative;
+    &__infos{
+        width:  265px;
+        line-height: 27px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; 
+    }
+    &__tarif{
+        position: absolute;
+        bottom:19px;
+        right: 20px;
+        font-weight: bold;
+    }
+    &__check{
+        visibility: hidden;
+    }
+}
+
+.plats{
+    @include rectangles-menus;
+    &__infos{
+        width:  260px;
+        line-height: 27px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; 
+        
+    }
+    &__tarif{
+        position: absolute;
+        bottom:19px;
+        right: 20px;
+        font-weight: bold;
+    }
+    &__check{
+        visibility: hidden;
+    }
+}
+
+.desserts{
+    @include rectangles-menus;
+    &__infos{
+        width:  260px;
+        line-height: 27px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; 
+    }
+    &__tarif{
+        position: absolute;
+        bottom:19px;
+        right: 20px;
+        font-weight: bold;
+    }
+    &__check{
+        visibility: hidden;
+    }
+}
+
+.button{
+    display: block;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    color: white;
+    background: linear-gradient(135deg, $color-secondary, $color-primary);
+    width: 60%;
+    margin: 22px auto;
+    padding: 10px;
+    font-weight: bold;
+    box-shadow: 1px 3px 10px 1px rgb(182, 181, 181);
+}
 
 
-
-
-
-
-
-
-
-
-
+.footer-menus{
+    width: 100%;
+    transform: translateY(-50px);
+    -webkit-transform: translateY(-50px);
+    -moz-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    -o-transform: translateY(-50px);
+}
