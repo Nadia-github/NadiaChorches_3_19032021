@@ -131,8 +131,22 @@ h3 {
     &__description {
         background-color: $light-gray;
         padding: 30px 30px 10px 30px;
+        @media only screen and (min-width: 650px) {
+            height: 200px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+        }
+        @media only screen and (min-width: 1000px) {
+            padding: 30px;
+            justify-content: space-around;
+        }
         h1 {
             padding: 0 10px;
+            @media only screen and (min-width: 650px) {
+                padding: 0px;
+            }
         }
         p {
             padding-top: 10px;
@@ -141,10 +155,6 @@ h3 {
         &__button {
             display: block;
             border-radius: 20px;
-            -webkit-border-radius: 20px;
-            -moz-border-radius: 20px;
-            -ms-border-radius: 20px;
-            -o-border-radius: 20px;
             color: white;
             background: linear-gradient(135deg, $color-secondary, $color-primary);
             width: 190px;
@@ -152,9 +162,20 @@ h3 {
             padding: 10px;
             font-weight: bold;
             box-shadow: 1px 3px 10px 1px rgb(182, 181, 181);
+            transition: box-shadow 400ms;
             @media only screen and (min-width: 650px) {
                 width: 240px;
                 padding: 19px;
+                margin: 0;
+            }
+            &:hover {
+                box-shadow: 2px 4px 10px 5px rgb(192, 181, 190);
+            }
+        }
+        &__text{
+            @media only screen and (min-width: 650px) {
+                text-align: left;
+                padding-right: 30px;
             }
         }
     }
@@ -169,8 +190,8 @@ h3 {
         text-align: left;
         margin-bottom: 25px;
         @media only screen and (min-width: 650px) {
-            text-align: center;
             margin-bottom: 10px;
+            margin-left: 30px;
         }
     }
     &__ul {
@@ -186,13 +207,12 @@ h3 {
         background-color: $light-gray;
         padding: 20px;
         border-radius: 15px;
-        -webkit-border-radius: 15px;
-        -moz-border-radius: 15px;
-        -ms-border-radius: 15px;
-        -o-border-radius: 15px;
         box-shadow: 0px 3px 5px 2px rgb(219, 219, 219);
         font-weight: bold;
         font-size: 1rem;
+        @media only screen and (max-width: 330px) {
+            font-size: 0.95rem;
+        }
         @media only screen and (min-width: 650px) {
             line-height: 50px;
             margin: 20px 10px;
@@ -201,9 +221,10 @@ h3 {
             display: flex;
             flex-direction: column;
             text-align: center;
-            padding: 10px;
+            padding: 8px;
             justify-content: space-between;
             font-size: 1.02rem;
+            transition: transform 400ms;
         }
         @media only screen and (min-width: 1000px) {
             font-size: 1.2rem;
@@ -211,6 +232,8 @@ h3 {
         }
         &:hover {
             background-color: $light-purple;
+            box-shadow: 1px 3px 10px 1px rgb(211, 205, 209);
+            transform: scale(1.03);
         }
         &__num {
             position: absolute;
@@ -236,8 +259,7 @@ h3 {
             margin: 0 20px;
             color: gray;
             @media only screen and (min-width: 650px) {
-                margin: 0px;
-                margin: 20px;
+                margin: 10px;
                 font-size: 1.8rem;
             }
             &:hover {
@@ -263,13 +285,13 @@ main {
 .ctn {
     @media only screen and (min-width: 650px) {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
         grid-gap: 30px;
         grid-auto-rows: minmax(100px, auto);
     }
     @media only screen and (min-width: 1000px) {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 20px;
         grid-auto-rows: minmax(100px, auto);
     }
@@ -282,6 +304,11 @@ main {
     border-radius: 20px;
     height: 250px;
     margin-bottom: 20px;
+    transition: transform 400ms;
+    &:hover {
+        box-shadow: 1px 3px 10px 1px rgb(65, 35, 56);
+        transform: scale(1.03);
+    }
     &__img {
     height: 180px;
     border-top-left-radius: 20px;
@@ -320,17 +347,18 @@ footer {
     line-height: 25px;
     @media only screen and (min-width: 650px) {
         text-align: center;
+        height: 200px;
     }
     ul {
         @media only screen and (min-width: 650px) {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr 1fr;
             grid-gap: 20px;
             text-align: center;
         }
         @media only screen and (min-width: 1000px) {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-gap: 20px;
             grid-auto-rows: minmax(100px, auto);
             text-align: center;
@@ -339,7 +367,7 @@ footer {
     }
     img {
         width: 120px;
-        margin-bottom: 15px;
+        margin-bottom: 30px;
         filter: invert(100%);
         -webkit-filter: invert(100%);
         @media only screen and (min-width: 650px) {
@@ -354,7 +382,10 @@ footer {
         }
     }
     i {
-        size: 2px;
+        font-size: 12px;
+        @media only screen and (min-width: 650px) {
+            font-size: 16px;
+        }
     }
     a {
         color: white;
@@ -373,10 +404,16 @@ footer {
 
 .height-s {
     height: 1900px;
+    @media only screen and (min-width: 1000px) {
+        height: 1130px;
+    }
 }
 
 .height-m {
     height: 2000px;
+    @media only screen and (min-width: 1000px) {
+        height: 1232px;
+    }
 }
 
 #intro {
@@ -405,41 +442,58 @@ footer {
             width: 300px;
         }
     }
+}
 
 .restaurant-pic {
     height: 300px;
 }
 
-.menus {
+.menus{
     width: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
     transform: translateY(-50px);
-    -webkit-transform: translateY(-50px);
-    -moz-transform: translateY(-50px);
-    -ms-transform: translateY(-50px);
-    -o-transform: translateY(-50px);
     border-radius: 30px 30px 0 0;
-    -webkit-border-radius: 30px 30px 0 0;
-    -moz-border-radius: 30px 30px 0 0;
-    -ms-border-radius: 30px 30px 0 0;
-    -o-border-radius: 30px 30px 0 0;
-    
     &__titre {
         text-align: left;
         @include title-style;
         margin-bottom: 20px;
+        @media only screen and (min-width : 650px) {
+            text-align: center;
+            font-size: 1.7rem;
+            margin: 25px 0 40px 0;
+        }
     }
     &__icon {
         position: absolute;
         font-size: 1.3rem;
         top: 28px;
         right: 50px;
+        @media only screen and (min-width : 650px) {
+            font-size: 1.7rem;
+            top: 44px;
+            right: 50px;
+        }
     }
     &__plats {
         font-weight: normal;
         margin: 30px 0 10px 0;
+        @media only screen and (min-width: 650px) {
+            margin-left: 60px;
+        }  
+        @media only screen and (min-width: 1000px) {
+            margin: 0 0 10px 0;
+        }
+    }
+    &__ctn { 
+        @media only screen and (min-width: 1000px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: baseline;
+            text-align: center;
+        }
     }
 }
 
@@ -447,10 +501,27 @@ footer {
     background-color: $color-tertiary;
     height: 5px;
     width: 55px;
+    @media only screen and (min-width: 650px) {
+        margin-left: 60px;
+    }  
+    @media only screen and (min-width: 1000px) {
+        margin-left: 0px;
+    }  
 }
 
 .entrees {
     @include rectangles-menus;
+    @media only screen and (min-width: 650px) {
+        width: 70%;
+        margin: 20px auto;
+        font-size: 1rem;
+    }
+    @media only screen and (min-width: 1000px) {
+        width: 300px;
+    }
+    @media only screen and (min-width: 1300px) {
+        width: 400px;
+    }
     position: relative;
     &__infos {
         width: 265px;
@@ -472,6 +543,17 @@ footer {
 
 .plats {
     @include rectangles-menus;
+    @media only screen and (min-width: 650px) {
+        width: 70%;
+        margin: 20px auto;
+        font-size: 1rem;
+    }
+    @media only screen and (min-width: 1000px) {
+        width: 300px;
+    }
+    @media only screen and (min-width: 1300px) {
+        width: 400px;
+    }
     &__infos {
         width: 260px;
         line-height: 27px;
@@ -492,6 +574,17 @@ footer {
 
 .desserts {
     @include rectangles-menus;
+    @media only screen and (min-width: 650px) {
+        width: 70%;
+        margin: 20px auto;
+        font-size: 1rem;
+    }
+    @media only screen and (min-width: 1000px) {
+        width: 300px;
+    }
+    @media only screen and (min-width: 1300px) {
+        width: 400px;
+    }
     &__infos {
         width:  260px;
         line-height: 27px;
@@ -513,10 +606,6 @@ footer {
 .button{
     display: block;
     border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
     color: white;
     background: linear-gradient(135deg, $color-secondary, $color-primary);
     width: 60%;
@@ -524,14 +613,16 @@ footer {
     padding: 10px;
     font-weight: bold;
     box-shadow: 1px 3px 10px 1px rgb(182, 181, 181);
+    @media only screen and (min-width: 650px) {
+        width: 300px;
+        padding: 20px;
+    }
+    &:hover {
+        box-shadow: 2px 4px 10px 5px rgb(192, 181, 190);
+    }
 }
 
 .footer-menus {
     width: 100%;
     transform: translateY(-50px);
-    -webkit-transform: translateY(-50px);
-    -moz-transform: translateY(-50px);
-    -ms-transform: translateY(-50px);
-    -o-transform: translateY(-50px);
-}
 }
