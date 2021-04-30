@@ -1,5 +1,5 @@
 /* _____ variables _____ */
-$font-size: (h1:1.6rem, h2:1.4rem, h3: 1.1rem);
+$font-size: (h1:1.6rem, h2:1.4rem, h3: 1.15rem);
 
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
@@ -10,7 +10,7 @@ $light-purple: #e6ddf1;
 
 
 /* _____ mixins _____ */
-@mixin title-style{
+@mixin title-style {
     font-family: 'Shrikhand', cursive ;
     color: black;
 }
@@ -33,7 +33,7 @@ $light-purple: #e6ddf1;
 
 /*==================================================================================*/
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -41,7 +41,7 @@ $light-purple: #e6ddf1;
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     color: black;
     margin: 0 auto;
@@ -50,48 +50,57 @@ body{
     font-size: 15px;
     transition: 400ms;
     position: relative;
-    @media only screen and (min-width: 650px){
+    @media only screen and (min-width: 650px) {
         font-size: 16px;
-        }
+    }
+    @media only screen and (min-width: 1000px) {
+        font-size: 18px;
+    }
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-img{
+img {
     object-fit: cover;
     width: 100%;
 }
 
-h1{
+h1 {
     font-size: map-get($font-size, h1);
     font-weight: bolder;
 }
 
-h2{
+h2 {
     font-size: map-get($font-size, h2);
     font-weight: bold;
 }
 
-h3{
+h3 {
     font-size: map-get($font-size, h3);
     font-weight: bold;
 }
 
-#header{
+#header {
     padding: 20px 0 10px 0;
 }
 
-#logo_intro{
+#logo_intro {
     width: 40%;
+    @media only screen and (min-width: 650px) {
+        width: 30%;
+    }
+    @media only screen and (min-width: 1000px) {
+        width: 300px;
+    }
 }
 
-.intro{
+.intro {
     display: flex;
     flex-direction: column;
-    &__form{
+    &__form {
         display: block;
         text-align: center;
         align-items: center;
@@ -100,36 +109,36 @@ h3{
         margin: 0 auto;
         width: 100%;
         box-shadow: inset 0px 4px 4px -2px #9b9b9b;
-        i{
+        i {
             font-size: 17px;
         }
-        input{
+        input {
             border: none;
             background-color: $dark-gray;
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-weight: bold;
-            width: 45%;
+            width: 180px;
             text-align: center;
             padding-left: 5px;
-            &::placeholder{
+            &::placeholder {
                 color:black;
             }
-            &:active{
+            &:active {
                 background-color: $dark-gray;
             }
         }
     }
-    &__description{
+    &__description {
         background-color: $light-gray;
         padding: 30px 30px 10px 30px;
-        h1{
+        h1 {
             padding: 0 10px;
         }
-        p{
+        p {
             padding-top: 10px;
             font-size: 1.1rem;
         }
-        &__button{
+        &__button {
             display: block;
             border-radius: 20px;
             -webkit-border-radius: 20px;
@@ -138,36 +147,39 @@ h3{
             -o-border-radius: 20px;
             color: white;
             background: linear-gradient(135deg, $color-secondary, $color-primary);
-            width: 60%;
+            width: 190px;
             margin: 22px auto;
             padding: 10px;
             font-weight: bold;
             box-shadow: 1px 3px 10px 1px rgb(182, 181, 181);
+            @media only screen and (min-width: 650px) {
+                width: 240px;
+                padding: 19px;
+            }
         }
     }
 }
 
-.nav{
+.nav {
     padding: 30px;
     @media only screen and (min-width: 650px){
         padding: 30px 0px;
     }
-    &__heading{
+    &__heading {
         text-align: left;
         margin-bottom: 25px;
-        @media only screen and (min-width: 650px){
-        text-align: center;
-        margin-bottom: 10px;
-        }
-    }
-    
-    &__ul{
         @media only screen and (min-width: 650px) {
-        display: flex;
-        margin: 0;
+            text-align: center;
+            margin-bottom: 10px;
         }
     }
-    &__link{
+    &__ul {
+        @media only screen and (min-width: 650px) {
+            display: flex;
+            margin: 0;
+        }
+    }
+    &__link {
         position: relative;
         text-align: left;
         margin: 15px auto;
@@ -182,6 +194,7 @@ h3{
         font-weight: bold;
         font-size: 1rem;
         @media only screen and (min-width: 650px) {
+            line-height: 50px;
             margin: 20px 10px;
             padding: 20px 0px;
             width: 100%;
@@ -190,11 +203,16 @@ h3{
             text-align: center;
             padding: 10px;
             justify-content: space-between;
+            font-size: 1.02rem;
         }
-        &:hover{
+        @media only screen and (min-width: 1000px) {
+            font-size: 1.2rem;
+            margin: 20px;
+        }
+        &:hover {
             background-color: $light-purple;
         }
-        &__num{
+        &__num {
             position: absolute;
             left: -3%;
             top: 18px;
@@ -207,52 +225,70 @@ h3{
             @media only screen and (min-width: 650px) {
                 left: -0.5%;
                 top: -1px;
+                padding: 0 0 25px 0;
+                height: 42px;
+                width: 40px;
+                font-size: 15px;
+                text-align: center;
             }
         }
-       i{
+       i {
             margin: 0 20px;
             color: gray;
             @media only screen and (min-width: 650px) {
                 margin: 0px;
+                margin: 20px;
+                font-size: 1.8rem;
             }
-            &:hover{
+            &:hover {
                 color:$color-primary;
             }
         }
     }
 }
 
-.fa-mobile-alt{
+.fa-mobile-alt {
     margin-right: 60px;
 }
 
-main{
+main {
     padding: 30px;
-    background-color: $light-gray;
-    @media only screen and (min-width: 650px){
-        display: grid;
-    }
-    
-    h2{
+    background-color: $light-gray;  
+    h2 {
         text-align: left;
         margin-bottom: 25px;
     } 
 }
 
-.fig{
+.ctn {
+    @media only screen and (min-width: 650px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+    @media only screen and (min-width: 1000px) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+}
+
+.fig {
     position: relative;
     background-color: white;
     box-shadow: 0px 3px 5px 2px rgb(214, 214, 214);
     border-radius: 20px;
     height: 250px;
     margin-bottom: 20px;
-    &__img{
+    &__img {
     height: 180px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     color: black;
     }
-    &__new{
+    &__new {
         position:absolute;
         right: 15px;
         top: 15px;
@@ -261,83 +297,120 @@ main{
         font-weight: bold;
         padding: 7px 10px;
     }
-    &__caption{
+    &__caption {
         display: flex;
         justify-content: space-between;
         padding:10px 15px;
-        &__text{
+        &__text {
             text-align: left;
             line-height: 23px;
         }
-        i{
+        i {
             font-size: 24px;
             margin-top: 5px;
         }
     }
 }
 
-footer{
+footer {
     background-color: rgb(66, 65, 65);
     color: white;
     padding: 30px;
     text-align: left;
     line-height: 25px;
-    img{
-        width: 45%;
+    @media only screen and (min-width: 650px) {
+        text-align: center;
+    }
+    ul {
+        @media only screen and (min-width: 650px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            text-align: center;
+        }
+        @media only screen and (min-width: 1000px) {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+            grid-auto-rows: minmax(100px, auto);
+            text-align: center;
+            height: 50px;
+        }
+    }
+    img {
+        width: 120px;
         margin-bottom: 15px;
         filter: invert(100%);
         -webkit-filter: invert(100%);
-}
-    &__bold{
-        margin-bottom: 10px;
+        @media only screen and (min-width: 650px) {
+            width: 150px;
+            margin-bottom: 30px;
+        }
     }
-    i{
+    &__bold {
+        margin-bottom: 10px;
+        @media only screen and (min-width: 1000px) {
+            margin-bottom: 0px;
+        }
+    }
+    i {
         size: 2px;
     }
-    a{
+    a {
         color: white;
     }
 }
 
-.bold{
+.bold {
     font-weight: bold;
 }
 
-.bold-margin{
+.bold-margin {
     margin-left: 5px;
 }
 
 /*Propriétés propres aux pages des menus de chaque restaurant*/
 
-.height-s{
+.height-s {
     height: 1900px;
 }
 
-.height-m{
+.height-m {
     height: 2000px;
 }
 
-#intro{
+#intro {
     margin: 15px auto;
     position: relative;
-    &__icon{
+    &__icon {
         position: absolute;
         left : 5%;
         top: 15%;
         font-size: 18px;
         font-weight: bold;
+        @media only screen and (min-width: 650px) {
+            font-size: 20px;
+        }
+        @media only screen and (min-width: 1000px) {
+            font-size: 25px;
+        }
     }
-    &__logo{
+    &__logo {
         margin: auto;
         width: 40%;
+        @media only screen and (min-width: 650px) {
+            width: 260px;
+        }
+        @media only screen and (min-width: 1000px) {
+            width: 300px;
+        }
     }
-}
 
-.restaurant-pic{
+.restaurant-pic {
     height: 300px;
 }
 
-.menus{
+.menus {
     width: 100%;
     padding: 20px;
     display: flex;
@@ -347,94 +420,92 @@ footer{
     -moz-transform: translateY(-50px);
     -ms-transform: translateY(-50px);
     -o-transform: translateY(-50px);
-
-    border-radius: 30px 30px 0 0 ;
-    -webkit-border-radius: 30px 30px 0 0 ;
-    -moz-border-radius: 30px 30px 0 0 ;
-    -ms-border-radius: 30px 30px 0 0 ;
-    -o-border-radius: 30px 30px 0 0 ;
-
-    &__titre{
+    border-radius: 30px 30px 0 0;
+    -webkit-border-radius: 30px 30px 0 0;
+    -moz-border-radius: 30px 30px 0 0;
+    -ms-border-radius: 30px 30px 0 0;
+    -o-border-radius: 30px 30px 0 0;
+    
+    &__titre {
         text-align: left;
         @include title-style;
         margin-bottom: 20px;
     }
-    &__icon{
+    &__icon {
         position: absolute;
         font-size: 1.3rem;
         top: 28px;
         right: 50px;
     }
-    &__plats{
+    &__plats {
         font-weight: normal;
         margin: 30px 0 10px 0;
     }
 }
 
-.barre{
+.barre {
     background-color: $color-tertiary;
     height: 5px;
     width: 55px;
 }
 
-.entrees{
+.entrees {
     @include rectangles-menus;
     position: relative;
-    &__infos{
-        width:  265px;
+    &__infos {
+        width: 265px;
         line-height: 27px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap; 
     }
-    &__tarif{
+    &__tarif {
         position: absolute;
-        bottom:19px;
+        bottom: 19px;
         right: 20px;
         font-weight: bold;
     }
-    &__check{
+    &__check {
         visibility: hidden;
     }
 }
 
-.plats{
+.plats {
     @include rectangles-menus;
-    &__infos{
+    &__infos {
+        width: 260px;
+        line-height: 27px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; 
+    }
+    &__tarif {
+        position: absolute;
+        bottom: 19px;
+        right: 20px;
+        font-weight: bold;
+    }
+    &__check {
+        visibility: hidden;
+    }
+}
+
+.desserts {
+    @include rectangles-menus;
+    &__infos {
         width:  260px;
         line-height: 27px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap; 
-        
     }
-    &__tarif{
+    &__tarif {
         position: absolute;
-        bottom:19px;
+        bottom: 19px;
         right: 20px;
         font-weight: bold;
     }
-    &__check{
-        visibility: hidden;
-    }
-}
-
-.desserts{
-    @include rectangles-menus;
-    &__infos{
-        width:  260px;
-        line-height: 27px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap; 
-    }
-    &__tarif{
-        position: absolute;
-        bottom:19px;
-        right: 20px;
-        font-weight: bold;
-    }
-    &__check{
+    &__check {
         visibility: hidden;
     }
 }
@@ -455,12 +526,12 @@ footer{
     box-shadow: 1px 3px 10px 1px rgb(182, 181, 181);
 }
 
-
-.footer-menus{
+.footer-menus {
     width: 100%;
     transform: translateY(-50px);
     -webkit-transform: translateY(-50px);
     -moz-transform: translateY(-50px);
     -ms-transform: translateY(-50px);
     -o-transform: translateY(-50px);
+}
 }

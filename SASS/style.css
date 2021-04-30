@@ -29,6 +29,12 @@ body {
   }
 }
 
+@media only screen and (min-width: 1000px) {
+  body {
+    font-size: 18px;
+  }
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -51,7 +57,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: bold;
 }
 
@@ -61,6 +67,18 @@ h3 {
 
 #logo_intro {
   width: 40%;
+}
+
+@media only screen and (min-width: 650px) {
+  #logo_intro {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #logo_intro {
+    width: 300px;
+  }
 }
 
 .intro {
@@ -94,9 +112,9 @@ h3 {
 .intro__form input {
   border: none;
   background-color: #e0e0e0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: bold;
-  width: 45%;
+  width: 180px;
   text-align: center;
   padding-left: 5px;
 }
@@ -144,12 +162,19 @@ h3 {
   -o-border-radius: 20px;
   color: white;
   background: linear-gradient(135deg, #FF79DA, #9356DC);
-  width: 60%;
+  width: 190px;
   margin: 22px auto;
   padding: 10px;
   font-weight: bold;
   -webkit-box-shadow: 1px 3px 10px 1px #b6b5b5;
           box-shadow: 1px 3px 10px 1px #b6b5b5;
+}
+
+@media only screen and (min-width: 650px) {
+  .intro__description__button {
+    width: 240px;
+    padding: 19px;
+  }
 }
 
 .nav {
@@ -202,6 +227,7 @@ h3 {
 
 @media only screen and (min-width: 650px) {
   .nav__link {
+    line-height: 50px;
     margin: 20px 10px;
     padding: 20px 0px;
     width: 100%;
@@ -217,6 +243,14 @@ h3 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    font-size: 1.02rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .nav__link {
+    font-size: 1.2rem;
+    margin: 20px;
   }
 }
 
@@ -240,6 +274,11 @@ h3 {
   .nav__link__num {
     left: -0.5%;
     top: -1px;
+    padding: 0 0 25px 0;
+    height: 42px;
+    width: 40px;
+    font-size: 15px;
+    text-align: center;
   }
 }
 
@@ -251,6 +290,8 @@ h3 {
 @media only screen and (min-width: 650px) {
   .nav__link i {
     margin: 0px;
+    margin: 20px;
+    font-size: 1.8rem;
   }
 }
 
@@ -267,16 +308,31 @@ main {
   background-color: #f1f1f1;
 }
 
-@media only screen and (min-width: 650px) {
-  main {
-    display: -ms-grid;
-    display: grid;
-  }
-}
-
 main h2 {
   text-align: left;
   margin-bottom: 25px;
+}
+
+@media only screen and (min-width: 650px) {
+  .ctn {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .ctn {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+  }
 }
 
 .fig {
@@ -334,15 +390,58 @@ footer {
   line-height: 25px;
 }
 
+@media only screen and (min-width: 650px) {
+  footer {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  footer ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  footer ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+    text-align: center;
+    height: 50px;
+  }
+}
+
 footer img {
-  width: 45%;
+  width: 120px;
   margin-bottom: 15px;
   filter: invert(100%);
   -webkit-filter: invert(100%);
 }
 
+@media only screen and (min-width: 650px) {
+  footer img {
+    width: 150px;
+    margin-bottom: 30px;
+  }
+}
+
 footer__bold {
   margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 1000px) {
+  footer__bold {
+    margin-bottom: 0px;
+  }
 }
 
 footer i {
@@ -383,16 +482,40 @@ footer a {
   font-weight: bold;
 }
 
+@media only screen and (min-width: 650px) {
+  #intro__icon {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #intro__icon {
+    font-size: 25px;
+  }
+}
+
 #intro__logo {
   margin: auto;
   width: 40%;
 }
 
-.restaurant-pic {
+@media only screen and (min-width: 650px) {
+  #intro__logo {
+    width: 260px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #intro__logo {
+    width: 300px;
+  }
+}
+
+#intro .restaurant-pic {
   height: 300px;
 }
 
-.menus {
+#intro .menus {
   width: 100%;
   padding: 20px;
   display: -webkit-box;
@@ -414,32 +537,32 @@ footer a {
   -o-border-radius: 30px 30px 0 0;
 }
 
-.menus__titre {
+#intro .menus__titre {
   text-align: left;
   font-family: 'Shrikhand', cursive;
   color: black;
   margin-bottom: 20px;
 }
 
-.menus__icon {
+#intro .menus__icon {
   position: absolute;
   font-size: 1.3rem;
   top: 28px;
   right: 50px;
 }
 
-.menus__plats {
+#intro .menus__plats {
   font-weight: normal;
   margin: 30px 0 10px 0;
 }
 
-.barre {
+#intro .barre {
   background-color: #99E2D0;
   height: 5px;
   width: 55px;
 }
 
-.entrees {
+#intro .entrees {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -459,7 +582,7 @@ footer a {
   position: relative;
 }
 
-.entrees__infos {
+#intro .entrees__infos {
   width: 265px;
   line-height: 27px;
   overflow: hidden;
@@ -467,18 +590,18 @@ footer a {
   white-space: nowrap;
 }
 
-.entrees__tarif {
+#intro .entrees__tarif {
   position: absolute;
   bottom: 19px;
   right: 20px;
   font-weight: bold;
 }
 
-.entrees__check {
+#intro .entrees__check {
   visibility: hidden;
 }
 
-.plats {
+#intro .plats {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -497,7 +620,7 @@ footer a {
           box-shadow: 0px 3px 5px 2px #d6d6d6;
 }
 
-.plats__infos {
+#intro .plats__infos {
   width: 260px;
   line-height: 27px;
   overflow: hidden;
@@ -505,18 +628,18 @@ footer a {
   white-space: nowrap;
 }
 
-.plats__tarif {
+#intro .plats__tarif {
   position: absolute;
   bottom: 19px;
   right: 20px;
   font-weight: bold;
 }
 
-.plats__check {
+#intro .plats__check {
   visibility: hidden;
 }
 
-.desserts {
+#intro .desserts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -535,7 +658,7 @@ footer a {
           box-shadow: 0px 3px 5px 2px #d6d6d6;
 }
 
-.desserts__infos {
+#intro .desserts__infos {
   width: 260px;
   line-height: 27px;
   overflow: hidden;
@@ -543,18 +666,18 @@ footer a {
   white-space: nowrap;
 }
 
-.desserts__tarif {
+#intro .desserts__tarif {
   position: absolute;
   bottom: 19px;
   right: 20px;
   font-weight: bold;
 }
 
-.desserts__check {
+#intro .desserts__check {
   visibility: hidden;
 }
 
-.button {
+#intro .button {
   display: block;
   border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -571,7 +694,7 @@ footer a {
           box-shadow: 1px 3px 10px 1px #b6b5b5;
 }
 
-.footer-menus {
+#intro .footer-menus {
   width: 100%;
   transform: translateY(-50px);
   -webkit-transform: translateY(-50px);
