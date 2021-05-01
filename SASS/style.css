@@ -309,6 +309,7 @@ h3 {
           box-shadow: 1px 3px 10px 1px #d3cdd1;
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
+  cursor: pointer;
 }
 
 .nav__link__num {
@@ -356,13 +357,23 @@ h3 {
 }
 
 main {
-  padding: 30px;
+  padding: 30px 30px 50px 30px;
   background-color: #f1f1f1;
 }
 
 main h2 {
   text-align: left;
   margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 649px) {
+  .ctn {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
+  }
 }
 
 @media only screen and (min-width: 650px) {
@@ -394,7 +405,6 @@ main h2 {
           box-shadow: 0px 3px 5px 2px #d6d6d6;
   border-radius: 20px;
   height: 250px;
-  margin-bottom: 20px;
   -webkit-transition: -webkit-transform 400ms;
   transition: -webkit-transform 400ms;
   transition: transform 400ms;
@@ -712,7 +722,7 @@ footer a {
   -o-border-radius: 20px;
   -webkit-box-shadow: 0px 3px 5px 2px #d6d6d6;
           box-shadow: 0px 3px 5px 2px #d6d6d6;
-  position: relative;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 650px) {
@@ -736,11 +746,14 @@ footer a {
 }
 
 .entrees__infos {
-  width: 265px;
+  width: 90%;
   line-height: 27px;
+  white-space: nowrap;
+}
+
+.entrees__infos h3, .entrees__infos p {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .entrees__tarif {
@@ -771,6 +784,7 @@ footer a {
   -o-border-radius: 20px;
   -webkit-box-shadow: 0px 3px 5px 2px #d6d6d6;
           box-shadow: 0px 3px 5px 2px #d6d6d6;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 650px) {
@@ -794,11 +808,14 @@ footer a {
 }
 
 .plats__infos {
-  width: 260px;
+  width: 90%;
   line-height: 27px;
+  white-space: nowrap;
+}
+
+.plats__infos p, .plats__infos h3 {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .plats__tarif {
@@ -829,6 +846,7 @@ footer a {
   -o-border-radius: 20px;
   -webkit-box-shadow: 0px 3px 5px 2px #d6d6d6;
           box-shadow: 0px 3px 5px 2px #d6d6d6;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 650px) {
@@ -852,11 +870,14 @@ footer a {
 }
 
 .desserts__infos {
-  width: 260px;
+  width: 90%;
   line-height: 27px;
+  white-space: nowrap;
+}
+
+.desserts__infos p, .desserts__infos h3 {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .desserts__tarif {
@@ -881,6 +902,7 @@ footer a {
   font-weight: bold;
   -webkit-box-shadow: 1px 3px 10px 1px #b6b5b5;
           box-shadow: 1px 3px 10px 1px #b6b5b5;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 650px) {
