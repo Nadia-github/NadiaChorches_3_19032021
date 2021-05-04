@@ -21,7 +21,11 @@
             </figure>
             <main class="menus">
                 <h1 class="menus__titre">À la française</h1>
-                <i class="menus__icon far fa-heart fig__caption__heart"></i>
+                <div class="menus__icon">
+                    <i class="menus__icon__vide far fa-heart fig__caption__heart">
+                        <i class="menus__icon__plein fas fa-heart fig__caption__heart"></i>    
+                    </i>                                                                                 
+                </div>
                 <div class="menus__ctn">
                     <div class="menus__ctn__plats"> 
                         <h2 class="menus__plats">ENTRÉES</h2>
@@ -58,6 +62,9 @@
                             <span class="entrees__tarif">
                             20€
                             </span>
+                            <div class="entrees__check">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="menus__ctn__plats"> 
@@ -162,7 +169,7 @@
                         <a href="#">Mentions légales</a>
                     </li>
                     <li class="footer__link">
-                        <a href="mailto:ohmyfood@yahoo.fr">Contact</a>
+                        <a href="mailto:contact@ohmyfood.com">Contact</a>
                     </li>
                 </ul>
             </footer>
