@@ -5,6 +5,9 @@
 @import "pages/pages-menus";
 
 
+
+
+
 body {
     font-family: 'Roboto', sans-serif;
     color: black;
@@ -134,6 +137,7 @@ h3 {
             }
             &:hover {
                 box-shadow: 2px 4px 10px 5px rgb(192, 181, 190);
+                background: linear-gradient(135deg, lighten($color-secondary,5), lighten($color-primary,5));
             }
         }
         &__text{

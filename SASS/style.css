@@ -215,6 +215,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: fondu 2s ease-in-out 1 normal backwards;
+          animation: fondu 2s ease-in-out 1 normal backwards;
   display: flex;
   background-color: white;
   text-align: left;
@@ -231,6 +233,24 @@
   -webkit-box-shadow: 0px 3px 5px 2px #d6d6d6;
           box-shadow: 0px 3px 5px 2px #d6d6d6;
   cursor: pointer;
+}
+
+@-webkit-keyframes fondu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fondu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media only screen and (min-width: 650px) {
@@ -354,6 +374,17 @@
   -webkit-box-shadow: 0px 3px 5px 2px #d6d6d6;
           box-shadow: 0px 3px 5px 2px #d6d6d6;
   cursor: pointer;
+  -webkit-animation: fondu 2s 1s ease-in-out 1 normal backwards;
+          animation: fondu 2s 1s ease-in-out 1 normal backwards;
+}
+
+@keyframes fondu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media only screen and (min-width: 650px) {
@@ -450,6 +481,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: fondu 2s 2s ease-in-out 1 normal backwards;
+          animation: fondu 2s 2s ease-in-out 1 normal backwards;
   display: flex;
   background-color: white;
   text-align: left;
@@ -466,6 +499,15 @@
   -webkit-box-shadow: 0px 3px 5px 2px #d6d6d6;
           box-shadow: 0px 3px 5px 2px #d6d6d6;
   cursor: pointer;
+}
+
+@keyframes fondu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media only screen and (min-width: 650px) {
@@ -576,6 +618,7 @@
 .button:hover {
   -webkit-box-shadow: 2px 4px 10px 5px #c0b5be;
           box-shadow: 2px 4px 10px 5px #c0b5be;
+  background: linear-gradient(135deg, #ff93e1, #a16be0);
 }
 
 .footer-menus {
@@ -784,6 +827,7 @@ h3 {
 .intro__description__button:hover {
   -webkit-box-shadow: 2px 4px 10px 5px #c0b5be;
           box-shadow: 2px 4px 10px 5px #c0b5be;
+  background: linear-gradient(135deg, #ff93e1, #a16be0);
 }
 
 @media only screen and (min-width: 650px) {

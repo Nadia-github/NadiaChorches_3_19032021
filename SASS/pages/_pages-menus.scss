@@ -136,6 +136,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    animation: fondu 2s ease-in-out 1 normal backwards;
+    @keyframes fondu {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        } 
+    }
     @include rectangles-menus;
     @media only screen and (min-width: 650px) {
         width: 70%;
@@ -202,6 +211,15 @@
     justify-content: space-between;
     align-items: center;
     @include rectangles-menus;
+    animation: fondu 2s 1s ease-in-out 1 normal backwards;
+    @keyframes fondu {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        } 
+    }
     @media only screen and (min-width: 650px) {
         width: 70%;
         margin: 20px auto;
@@ -250,7 +268,6 @@
         animation-name: rotate;
         animation-duration: 500ms;
     }
-
     @keyframes rotate {
         from {
             transform: rotate(0deg);
@@ -266,6 +283,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    animation: fondu 2s 2s ease-in-out 1 normal backwards;
+    @keyframes fondu {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        } 
+    }
     @include rectangles-menus;
     @media only screen and (min-width: 650px) {
         width: 70%;
@@ -344,6 +370,7 @@
     }
     &:hover {
         box-shadow: 2px 4px 10px 5px rgb(192, 181, 190);
+        background: linear-gradient(135deg, lighten($color-secondary,5), lighten($color-primary,5));
     }
 }
 
