@@ -1051,9 +1051,8 @@ main h2 {
   background: -webkit-linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  top: 1;
   right: 0;
-  bottom: 0;
+  bottom: 0.4px;
   left: 0;
   opacity: 0;
   z-index: -1;
