@@ -1,6 +1,6 @@
 __Projet OC N°3 - Ohmyfood | Parcours Développeur Web__
   
-<p>Lien du site: https://nadia-github.github.io/NadiaChorches_3_19032021/
+<p>Lien du site: https://nadia-github.github.io/Ohmyfood_Nadia/
 
 Ohmyfood est le troisième projet réalisé dans le cadre de ma formation de Développeur Web, dispensée par <strong>Openclassrooms</strong>.
 
